@@ -30,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:github": "yarn run build && gh-pages -d build",
+    "publish:github": "npm run build && gh-pages -d build",
     "prettier:base": "prettier --parser typescript --single-quote",
     "check:style": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
     "fix:style": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\"",
