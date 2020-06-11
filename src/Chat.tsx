@@ -37,13 +37,7 @@ export function ProgrammingChatBot() {
     const steps = [
         {
             id: 'start',
-            message: 'Hallo, schön, dass ich dir helfen kann. Ich bin Buddy, kein echter Mensch, aber ich kann schreiben wie ein echter Mensch. Was du schreibst bleibt unter uns und ich erzähle es nicht weiter. Wer bist du?',
-            trigger: 'start-2',
-            delay: 4000,
-        },
-        {
-            id: 'start-2',
-            message: 'Was du schreibst bleibt unter uns und ich erzähle es nicht weiter. Wer bist du?',
+            message: 'Hallo, schön, dass ich dir helfen kann. Ich bin Chatty, kein echter Mensch, aber ich kann schreiben wie ein echter Mensch. Was du schreibst bleibt unter uns und ich erzähle es nicht weiter. Wer bist du?',
             trigger: 'enter-name',
         },
         {
@@ -113,7 +107,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'happend-no',
-            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer für dich da. 😀",
+            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer da für dich. :)",
         },
         {
             id: 'happend-yes',
@@ -145,7 +139,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'help-person-no',
-            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer für dich da. 😀",
+            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer da für dich. :)",
         },
         {
             id: 'talk-yes',
@@ -289,9 +283,9 @@ export function ProgrammingChatBot() {
         {
             id: 'ask-home-fight-need-help',
             options: [
-                { value: 1, label: 'Ja', trigger: 'home-fight-want-help-yes' },
-                { value: 2, label: 'Nein', trigger: 'home-fight-want-help-no' },
-                { value: 1, label: 'Ich weiß nicht', trigger: 'home-fight-want-help-dont-know' },
+                { value: 1, label: 'Ja.', trigger: 'home-fight-want-help-yes' },
+                { value: 2, label: 'Nein.', trigger: 'home-fight-want-help-no' },
+                { value: 1, label: 'Ich weiß nicht.', trigger: 'home-fight-want-help-dont-know' },
             ],
         },
         {
