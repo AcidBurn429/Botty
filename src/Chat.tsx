@@ -37,7 +37,12 @@ export function ProgrammingChatBot() {
     const steps = [
         {
             id: 'start',
-            message: 'Hallo, schön, dass ich dir helfen kann. Ich bin Buddy Bot, kein echter Mensch, aber ich kann schreiben wie ein echter Mensch. Was du schreibst bleibt unter uns und ich erzähle es nicht weiter. Wer bist du?',
+            message: 'Hallo! Schön, dass ich dir helfen kann. Ich bin Botty. Ich bin kein echter Mensch, aber ich kann schreiben wie ein echter Mensch.',
+            trigger: 'start-2',
+        },
+        {
+            id: 'start-2',
+            message: 'Was du schreibst bleibt unter uns und ich erzähle es nicht weiter. Wer bist du?',
             trigger: 'enter-name',
         },
         {
@@ -75,8 +80,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'happyness-good',
-            message: 'Das ist schön, ich freue mich für dich!',
-            trigger: 'select-happend',
+            message: 'Das ist schön, ich freue mich für dich! Wenn du mich brauchst, ich bin hier 😀',
         },
         {
             id: 'happyness-sad',
@@ -90,7 +94,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'happyness-bof',
-            message: 'Okay..., was los?',
+            message: 'Okay..., ist was passiert?',
             trigger: 'select-happend',
         },
         {
@@ -107,7 +111,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'happend-no',
-            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer für dich da. :)",
+            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer für dich da. 😀",
         },
         {
             id: 'happend-yes',
@@ -139,7 +143,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'help-person-no',
-            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer für dich da. :)",
+            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer für dich da. 😀",
         },
         {
             id: 'talk-yes',
@@ -217,6 +221,14 @@ export function ProgrammingChatBot() {
             trigger: 'ask-fight-quantity',
         },
         {
+            id: 'fight-name-person-quantity',
+            message: (args: MessageArgs) => {
+                dispatch({ type: 'setName', value: args.previousValue });
+                return `Mit ${args.previousValue}. hast du oft Probleme mit ihm oder ihr oder ist es heute besonders schlimm?`;
+            },
+            trigger: 'ask-fight-quantity',
+        },
+        {
             id: 'ask-fight-quantity',
             options: [
                 { value: 1, label: 'Immer', trigger: 'home-fight-type' },
@@ -274,11 +286,23 @@ export function ProgrammingChatBot() {
         {
             id: 'home-fight-knower-maybe',
             message: 'Das ist echt doof.',
+            trigger: 'home-fight-need-help',
         },
         {
             id: 'home-fight-need-help',
-            message: 'Ich verstehe! Du brauchst dringend Hilfe! Ich kann dich mit einem netten Menschen verbinden, der dir helfen wird. Du brauchst keine Angst zu haben, das Gespräch ist geheim. Möchtest du das?',
+            message: 'Ich verstehe! Du brauchst dringend Hilfe!',
+            trigger: 'home-fight-need-help-2',
+        },
+        {
+            id: 'home-fight-need-help-2',
+            message: 'Ich kann dich mit einem netten Menschen verbinden, der dir helfen wird. Du brauchst keine Angst zu haben, das Gespräch ist geheim.',
+            trigger: 'home-fight-need-help-3',
+        },
+        {
+            id: 'home-fight-need-help-3',
+            message: 'Möchtest du das?',
             trigger: 'ask-home-fight-need-help',
+            delay: 3000
         },
         {
             id: 'ask-home-fight-need-help',
@@ -290,7 +314,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'home-fight-want-help-yes',
-            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 1161111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhrzu erreichen',
+            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 116 111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhrzu erreichen',
         },
         {
             id: 'home-fight-want-help-no',
@@ -311,7 +335,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'home-fight-number-yes',
-            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 1161111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhrzu erreichen',
+            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 116 111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhrzu erreichen',
         },
         {
             id: 'home-fight-number-no',
@@ -319,7 +343,67 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'where-school',
-            message: 'In der Schule? Das kenne ich ',
+            message: 'In der Schule? Das kenne ich 😀',
+            trigger: 'where-school-2',
+        },
+        {
+            id: 'where-school-2',
+            message: 'Hast du Probleme mit Lehrern oder mit anderen Schülern?',
+            trigger: 'school-select-problem-person',
+        },
+        {
+            id: 'school-select-problem-person',
+            options: [
+                { value: 1, label: 'Lehrer', trigger: 'school-problem-teacher' },
+                { value: 2, label: 'Andere Schüler', trigger: 'school-problem-students' },
+                { value: 3, label: 'Andere Person', trigger: 'school-problem-other-person' },
+            ],
+        },
+        {
+            id: 'school-problem-teacher',
+            message: 'Mit Lehrern also 😟. Was ist los?',
+            trigger: 'school-problem-teacher-ask-quantity',
+        },
+        {
+            id: 'school-problem-teacher-ask-quantity',
+            message: 'Passiert das oft?',
+            trigger: 'select-school-problem-teacher-quantity',
+        },
+        {
+            id: 'select-school-problem-teacher-quantity',
+            options: [
+                { value: 1, label: 'Ja, immer', trigger: 'school-problem-teacher-asked-parents' },
+                { value: 2, label: 'Nur ab und zu', trigger: 'school-problem-teacher-asked-parents' },
+                { value: 3, label: 'Manchmal', trigger: 'school-problem-teacher-asked-parents' },
+            ],
+        },
+        {
+            id: 'school-problem-teacher-asked-parents',
+            message: 'Hast du das deinen Eltern erzählt?',
+            trigger: 'select-school-problem-teacher-asked-parents',
+        },
+        {
+            id: 'select-school-problem-teacher-asked-parents',
+            options: [
+                { value: 1, label: 'Ja', trigger: 'school-problem-teacher-asked-parents-yes' },
+                { value: 2, label: 'Nein', trigger: 'school-problem-teacher-asked-parents-no' },
+            ],
+        },
+        {
+            id: 'school-problem-teacher-asked-parents-yes',
+            message: 'Gut 😀 Hat es geholfen?',
+        },
+        {
+            id: 'school-problem-teacher-asked-parents-no',
+            message: 'Möchtest du mit jemanden darüber sprechen? ich kann dir eine Telefonnummer geben 😀',
+        },
+        {
+            id: 'school-problem-students',
+            message: 'Dummy msg',
+        },
+        {
+            id: 'school-problem-other-person',
+            message: 'Dummy msg',
         },
         {
             id: 'where-else',
