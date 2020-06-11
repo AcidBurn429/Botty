@@ -1,17 +1,9 @@
 import React, { Dispatch, useState } from 'react';
 import ChatBot from 'react-simple-chatbot';
-import { MessageArgs, TriggerArgs } from './chatbot-types';
-import { createWebsiteURLWithData } from './urlArgs';
-import { useDispatch, useSelector } from 'react-redux';
+import { MessageArgs } from './chatbot-types';
+import { useDispatch } from 'react-redux';
 import { ChatBotAction } from './state/action';
-import { CodeBlock } from './CodeBlock';
-import { getXMLErrors, parseXML, getXMLBody } from './getXMLErrors';
-import { WebsitePreview } from './WebsitePreview';
-import { codeFromState } from './state/code';
-import { ChatBotState } from './state';
 import { ThemeProvider } from 'styled-components';
-
-type TriggerProps = { value: string; steps?: any };
 
 export function ProgrammingChatBot() {
   const dispatch = useDispatch<Dispatch<ChatBotAction>>();
@@ -227,7 +219,6 @@ export function ProgrammingChatBot() {
                 { value: 2, label: 'Heute', trigger: 'home-fight-type' },
                 { value: 3, label: 'Nur manchmal', trigger: 'home-fight-type' },
             ],
-            trigger: 'home-fight-type',
         },
         {
             id: 'home-fight-type',
