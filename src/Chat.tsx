@@ -1127,8 +1127,8 @@ export function ProgrammingChatBot() {
     botAvatar: require('./icon.png'),
     steps: steps,
     headerComponent: header,
-    bubbleOptionStyle: { backgroundColor: '#f8e7ca', color: 'black' },
-  };
+      bubbleOptionStyle: { backgroundColor: '#f8e7ca', color: 'black' }
+    };
 
   if (height <= 750 && width <= 600) {
     return (
