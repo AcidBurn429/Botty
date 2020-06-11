@@ -37,7 +37,7 @@ export function ProgrammingChatBot() {
     const steps = [
         {
             id: 'start',
-            message: 'Hallo, schön, dass ich dir helfen kann. Ich bin Chatty, kein echter Mensch, aber ich kann schreiben wie ein echter Mensch. Was du schreibst bleibt unter uns und ich erzähle es nicht weiter. Wer bist du?',
+            message: 'Hallo, schön, dass ich dir helfen kann. Ich bin Buddy Bot, kein echter Mensch, aber ich kann schreiben wie ein echter Mensch. Was du schreibst bleibt unter uns und ich erzähle es nicht weiter. Wer bist du?',
             trigger: 'enter-name',
         },
         {
@@ -85,7 +85,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'happyness-angry',
-            message: 'Oh, du bist wütend 😡! Das tut mir Leid. Ich schicke dir eine dicke Umarmung.  Ist dir was zugestoßen?',
+            message: 'Oh, du bist wütend 😡! Das tut mir Leid. Ist etwas passiert?',
             trigger: 'select-happend'
         },
         {
@@ -97,7 +97,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'happend-no',
-            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer da für dich. :)",
+            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer für dich da. :)",
         },
         {
             id: 'happend-yes',
@@ -113,7 +113,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'talk-no',
-            message: 'Es ist ok, wenn du es mir nicht erzählen möchtest. Aber es hilft oft, wenn man darüber spricht. Kannst du das jemandem anderen erzählen?',
+            message: 'Es ist ok, wenn du es mir nicht erzählen möchtest. Aber es hilft oft, wenn man darüber spricht. Kannst du es jemandem anderen erzählen?',
             trigger: 'ask-for-help-person',
         },
         {
@@ -125,15 +125,15 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'help-person-yes',
-            message: 'Super, dann nichts wie los, rede mit dieser Person. Es geht dir bestimmt danach besser ;)',
+            message: 'Super, dann nichts wie los, rede mit dieser Person. Es geht dir danach bestimmt besser ;)',
         },
         {
             id: 'help-person-no',
-            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer da für dich. :)",
+            message: "Okay. Du kannst aber jedes mal wiederkommen, wenn du Probleme hast. Ich bin immer für dich da. :)",
         },
         {
             id: 'talk-yes',
-            message: 'Super, ich höre zu. Wo ist dir was zugestoßen?',
+            message: 'Super, ich höre zu. Wo ist es passiert?',
             trigger: 'ask-where',
         },
         {
@@ -163,7 +163,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'home-fight-someone',
-            message: 'Ärger ist nicht schön! Mit wem hast du denn Ärger?',
+            message: 'Ärger ist nicht schön! Mit wem hast du zuhause Ärger?',
             trigger: 'ask-home-fight-person',
         },
         {
@@ -178,27 +178,27 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'home-fight-mom',
-            message: 'Ok, mit Mama. Hast du oft Ärger mit ihr oder ist es heute besonders schlimm?',
+            message: 'Ok, mit deiner Mama. Hast du oft Ärger mit ihr oder ist es heute besonders schlimm?',
             trigger: 'ask-fight-quantity',
         },
         {
             id: 'home-fight-dad',
-            message: 'Ok, mit Papa. Hast du oft Ärger mit ihr oder ist es heute besonders schlimm?',
+            message: 'Ok, mit deinem Papa. Hast du oft Ärger mit ihm oder ist es heute besonders schlimm?',
             trigger: 'ask-fight-quantity',
         },
         {
             id: 'home-fight-brother',
-            message: 'Ok, mit Bruder. Hast du oft Ärger mit ihr oder ist es heute besonders schlimm?',
+            message: 'Ok, mit deinem Bruder. Hast du oft Ärger mit ihm oder ist es heute besonders schlimm?',
             trigger: 'ask-fight-quantity',
         },
         {
             id: 'home-fight-sister',
-            message: 'Ok, mit Schwester. Hast du oft Ärger mit ihr oder ist es heute besonders schlimm?',
+            message: 'Ok, mit deiner Schwester. Hast du oft Ärger mit ihr oder ist es heute besonders schlimm?',
             trigger: 'ask-fight-quantity',
         },
         {
             id: 'home-fight-diff-person',
-            message: 'Ok, mit jemand Anderem? Wer ist das, denn?',
+            message: 'Ok, mit jemand anderem? Wer ist das denn?',
             trigger: 'ask-fight-name-person',
         },
         {
@@ -211,7 +211,7 @@ export function ProgrammingChatBot() {
             options: [
                 { value: 1, label: 'Immer', trigger: 'home-fight-type' },
                 { value: 2, label: 'Heute', trigger: 'home-fight-type' },
-                { value: 3, label: 'Nur machmal', trigger: 'home-fight-type' },
+                { value: 3, label: 'Nur manchmal', trigger: 'home-fight-type' },
             ],
             trigger: 'home-fight-type',
         },
@@ -224,36 +224,36 @@ export function ProgrammingChatBot() {
             id: 'ask-home-fight-type',
             options: [
                 { value: 1, label: 'Geschrei', trigger: 'home-fight-knower' },
-                { value: 2, label: 'Beschimpfungen', trigger: 'home-fight-knower' },
+                { value: 2, label: 'Böse Worte', trigger: 'home-fight-knower' },
                 { value: 3, label: 'Schläge', trigger: 'home-fight-knower' },
-                { value: 4, label: 'unangenehme Umarmungen oder Beruhrungen', trigger: 'home-fight-knower' },
+                { value: 4, label: 'unangenehme Umarmungen oder Berührungen', trigger: 'home-fight-knower' },
                 { value: 5, label: 'Etwas anderes', trigger: 'home-fight-knower' },
             ]
         },
         {
             id: 'home-fight-knower',
-            message: 'Weiss jemand anderen zuhause davon?',
+            message: 'Weiss jemand zuhause davon?',
             trigger: 'ask-home-fight-knower',
         },
         {
             id: 'ask-home-fight-knower',
             options: [
-                { value: 1, label: 'Ja', trigger: 'home-fight-knower-yes' },
-                { value: 2, label: 'Nein', trigger: 'home-fight-knower-no' },
-                { value: 3, label: 'Ich weiß es nicht', trigger: 'home-fight-knower-maybe' },
+                { value: 1, label: 'Ja.', trigger: 'home-fight-knower-yes' },
+                { value: 2, label: 'Nein.', trigger: 'home-fight-knower-no' },
+                { value: 3, label: 'Ich weiß es nicht.', trigger: 'home-fight-knower-maybe' },
             ],
         },
         {
             id: 'home-fight-knower-yes',
-            message: 'Jemand weiss es, und kann oder möchte nicht helfen?',
+            message: 'Jemand weiss es und kann oder möchte nicht helfen?',
             trigger: 'ask-home-fight-knower-does-nothing',
         },
         {
             id: 'ask-home-fight-knower-does-nothing',
             options: [
-                { value: 1, label: 'Kann nicht helfen', trigger: 'home-fight-need-help' },
-                { value: 2, label: 'Möchte nicht helfen', trigger: 'home-fight-need-help' },
-                { value: 3, label: 'Ich weiß nicht', trigger: 'home-fight-need-help' },
+                { value: 1, label: 'Kann nicht helfen.', trigger: 'home-fight-need-help' },
+                { value: 2, label: 'Möchte nicht helfen.', trigger: 'home-fight-need-help' },
+                { value: 3, label: 'Ich weiß nicht.', trigger: 'home-fight-need-help' },
             ],
         },
         {
@@ -267,36 +267,36 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'home-fight-need-help',
-            message: 'Ich verstehe! Du brauchst dringend Hilfe! Ich kann dir mit jemandem ganz ganz nett verbinden, der dir helfen wird. Du brauchst keine Angst zu haben. Mochtest du das?',
+            message: 'Ich verstehe! Du brauchst dringend Hilfe! Ich kann dich mit einem netten Menschen verbinden, der dir helfen wird. Du brauchst keine Angst zu haben, das Gespräch ist geheim. Möchtest du das?',
             trigger: 'ask-home-fight-need-help',
         },
         {
             id: 'ask-home-fight-need-help',
             options: [
-                { value: 1, label: 'Ja', trigger: 'home-fight-want-help-yes' },
-                { value: 2, label: 'Nein', trigger: 'home-fight-want-help-no' },
-                { value: 1, label: 'Ich weiß nicht', trigger: 'home-fight-want-help-dont-know' },
+                { value: 1, label: 'Ja.', trigger: 'home-fight-want-help-yes' },
+                { value: 2, label: 'Nein.', trigger: 'home-fight-want-help-no' },
+                { value: 1, label: 'Ich weiß nicht.', trigger: 'home-fight-want-help-dont-know' },
             ],
         },
         {
             id: 'home-fight-want-help-yes',
-            message: 'Toll, du bist super stark! Ruft die Nummer ....',
+            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 1161111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhrzu erreichen',
         },
         {
             id: 'home-fight-want-help-no',
-            message: 'Schade! ich kann dir trotzdem eine Telefonnummer geben, und du entscheidest, ob du anrufen willst, ok?',
+            message: 'Schade! ich kann dir trotzdem eine Telefonnummer geben und du entscheidest, ob du anrufen willst, ok?',
             trigger: 'ask-home-fight-help-number-want',
         },
         {
             id: 'home-fight-want-help-dont-know',
-            message: 'Okay. Ich kann dir trotzdem eine Telefonnummer geben, und du entscheidest, ob du anrufen willst, ok?',
+            message: 'Okay. Ich kann dir trotzdem eine Telefonnummer geben und du entscheidest, ob du anrufen willst, ok?',
             trigger: 'ask-home-fight-help-number-want',
         },
         {
             id: 'ask-home-fight-help-number-want',
             options: [
-                { value: 1, label: 'Ja, okay', trigger: 'home-fight-number-yes' },
-                { value: 1, label: 'Nein', trigger: 'home-fight-number-no' },
+                { value: 1, label: 'Ja, okay.', trigger: 'home-fight-number-yes' },
+                { value: 1, label: 'Nein.', trigger: 'home-fight-number-no' },
             ]
         },
         {
@@ -305,7 +305,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'home-fight-number-no',
-            message: 'Okay'
+            message: 'Okay.'
         },
         {
             id: 'where-school',
