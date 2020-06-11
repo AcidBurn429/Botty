@@ -13,14 +13,6 @@ import { ThemeProvider } from 'styled-components';
 
 type TriggerProps = { value: string; steps?: any };
 
-function LinkToWebsite() {
-  const code = useSelector<ChatBotState, string>((state) =>
-    codeFromState(state.code)
-  );
-  const url = createWebsiteURLWithData('site', code);
-  return <a href={url}>Klick hier um deine Website zu öffnen</a>;
-}
-
 export function ProgrammingChatBot() {
   const dispatch = useDispatch<Dispatch<ChatBotAction>>();
   const [height, setHeight] = useState(window.innerHeight);
@@ -433,12 +425,12 @@ export function ProgrammingChatBot() {
         fontSize: 16,
       }}
     >
-      Buddy
+      Botty
     </div>
   );
 
   const chatBotProps = {
-    headerTitle: 'Buddy',
+    headerTitle: 'Botty',
     botAvatar: require('./icon.png'),
     steps: steps,
     headerComponent: header,
