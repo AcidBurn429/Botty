@@ -76,7 +76,7 @@ export function ProgrammingChatBot() {
         {
             id: 'happyness-good',
             message: 'Das ist schön, ich freue mich für dich!',
-            trigger: 'select-happyness',
+            trigger: 'select-happend',
         },
         {
             id: 'happyness-sad',
@@ -91,12 +91,12 @@ export function ProgrammingChatBot() {
         {
             id: 'happyness-bof',
             message: 'Okay..., was los?',
-            trigger: 'select-happyness',
+            trigger: 'select-happend',
         },
         {
             id: 'happyness-bad',
-            message: 'Oh, was ist los?',
-            trigger: '',
+            message: 'Oh, dir geht es schlecht 😟 ! Das tut mir Leid. Ist etwas passiert?',
+            trigger: 'select-happend',
         },
         {
             id: 'select-happend',
