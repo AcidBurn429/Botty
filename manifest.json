@@ -6,7 +6,7 @@
       "src": "../src/icon.png",
       "type": "image/png",
       "sizes": "118x107"
-    },
+    }
   ],
   "start_url": ".",
   "display": "standalone",
