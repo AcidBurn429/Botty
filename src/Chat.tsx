@@ -56,7 +56,7 @@ export function ProgrammingChatBot() {
             id: 'select-happyness',
           options: [
             { value: 1, label: 'Gut 😀', trigger: 'happyness-good' },
-            { value: 2, label: ' Geht so 😐', trigger: 'happyness-bof' },
+            { value: 2, label: 'Geht so 😐', trigger: 'happyness-bof' },
               { value: 3, label: 'Schlecht 😟', trigger: 'happyness-bad' },
               { value: 4, label: 'Wütend 😡', trigger: 'happyness-angry' },
             { value: 5, label: 'Traurig 😢', trigger: 'happyness-sad' },
@@ -64,26 +64,41 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'happyness-good',
-            message: 'Das ist schön, ich freue mich für dich! Wenn du mich brauchst, ich bin hier 😀',
+            message: (args: MessageArgs) => {
+                dispatch({ type: 'setHappiness', value: parseInt(args.previousValue) });
+                return 'Das ist schön, ich freue mich für dich! Wenn du mich brauchst, ich bin hier 😀';
+            }
         },
         {
             id: 'happyness-sad',
-            message: 'Oh, du bist traurig, das tut mir Leid. Ist etwas passiert?',
+            message: (args: MessageArgs) => {
+                dispatch({ type: 'setHappiness', value: parseInt(args.previousValue) });
+                return 'Oh, du bist traurig, das tut mir Leid. Ist etwas passiert?';
+            },
             trigger: 'select-happend',
         },
         {
             id: 'happyness-angry',
-            message: 'Oh, du bist wütend 😡! Das tut mir Leid. Ist etwas passiert?',
+            message: (args: MessageArgs) => {
+                dispatch({ type: 'setHappiness', value: parseInt(args.previousValue) });
+                return 'Oh, du bist wütend 😡! Das tut mir Leid. Ist etwas passiert?';
+            },
             trigger: 'select-happend'
         },
         {
             id: 'happyness-bof',
-            message: 'Okay..., ist was passiert?',
+            message: (args: MessageArgs) => {
+                dispatch({ type: 'setHappiness', value: parseInt(args.previousValue) });
+                return 'Okay..., ist was passiert';
+            },
             trigger: 'select-happend',
         },
         {
             id: 'happyness-bad',
-            message: 'Oh, dir geht es schlecht 😟 ! Das tut mir Leid. Ist etwas passiert?',
+            message: (args: MessageArgs) => {
+                dispatch({ type: 'setHappiness', value: parseInt(args.previousValue) });
+                return 'Oh, dir geht es schlecht 😟 ! Das tut mir Leid. Ist etwas passiert?';
+            },
             trigger: 'select-happend',
         },
         {

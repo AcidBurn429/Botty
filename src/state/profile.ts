@@ -2,6 +2,7 @@ import { ChatBotAction } from './action';
 
 const defaultProfileState = {
   name: undefined as undefined | string,
+  happiness: undefined as undefined | number,
   age: undefined as undefined | number,
   url: undefined as undefined | string,
 };
@@ -13,6 +14,9 @@ export function profileReducer(
   switch (action.type) {
     case 'setAge':
       state = { ...state, age: action.value };
+      break;
+    case 'setHappiness':
+      state = { ...state, happiness: action.value };
       break;
     case 'setName':
       state = { ...state, name: action.value };

@@ -4,6 +4,10 @@ export type ChatBotAction =
       value: string;
     }
   | {
+    type: 'setHappiness';
+    value: number;
+  }
+  | {
       type: 'setAge';
       value: number;
     }
