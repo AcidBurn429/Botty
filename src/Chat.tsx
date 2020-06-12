@@ -68,7 +68,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'happyness-sad',
-            message: 'Oh, du bist traurig, das tut mir Leid . Ist etwas passiert?',
+            message: 'Oh, du bist traurig, das tut mir Leid. Ist etwas passiert?',
             trigger: 'select-happend',
         },
         {
@@ -243,8 +243,8 @@ export function ProgrammingChatBot() {
         {
             id: 'ask-home-fight-knower',
             options: [
-                { value: 1, label: 'Ja.', trigger: 'home-fight-knower-yes' },
-                { value: 2, label: 'Nein.', trigger: 'home-fight-knower-no' },
+                { value: 1, label: 'Ja', trigger: 'home-fight-knower-yes' },
+                { value: 2, label: 'Nein', trigger: 'home-fight-knower-no' },
                 { value: 3, label: 'Ich weiß es nicht.', trigger: 'home-fight-knower-maybe' },
             ],
         },
@@ -290,8 +290,8 @@ export function ProgrammingChatBot() {
         {
             id: 'ask-home-fight-need-help',
             options: [
-                { value: 1, label: 'Ja.', trigger: 'home-fight-want-help-yes' },
-                { value: 2, label: 'Nein.', trigger: 'home-fight-want-help-no' },
+                { value: 1, label: 'Ja', trigger: 'home-fight-want-help-yes' },
+                { value: 2, label: 'Nein', trigger: 'home-fight-want-help-no' },
                 { value: 1, label: 'Ich weiß nicht.', trigger: 'home-fight-want-help-dont-know' },
             ],
         },
@@ -313,12 +313,12 @@ export function ProgrammingChatBot() {
             id: 'ask-home-fight-help-number-want',
             options: [
                 { value: 1, label: 'Ja, okay.', trigger: 'home-fight-number-yes' },
-                { value: 1, label: 'Nein.', trigger: 'home-fight-number-no' },
+                { value: 1, label: 'Nein', trigger: 'home-fight-number-no' },
             ]
         },
         {
             id: 'home-fight-number-yes',
-            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 116 111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhrzu erreichen',
+            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 116 111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhr zu erreichen',
         },
         {
             id: 'home-fight-number-no',
