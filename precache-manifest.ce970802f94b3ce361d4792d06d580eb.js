@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3e3ebd31be6907b6426e1707ae8bcdff",
+    "revision": "4ae4b051583d91625d2b4903a001b23e",
     "url": "/AcidBurn429/Botty/index.html"
   },
   {
-    "revision": "9622c988ef45b0e9fb49",
-    "url": "/AcidBurn429/Botty/static/css/main.b574126d.chunk.css"
+    "revision": "3e39a4c062d0d4bbf83b",
+    "url": "/AcidBurn429/Botty/static/css/main.9a7a2d60.chunk.css"
   },
   {
     "revision": "d055e6d412344afd9e26",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AcidBurn429/Botty/static/js/2.ba2eee97.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9622c988ef45b0e9fb49",
-    "url": "/AcidBurn429/Botty/static/js/main.88dfb875.chunk.js"
+    "revision": "3e39a4c062d0d4bbf83b",
+    "url": "/AcidBurn429/Botty/static/js/main.d828eae3.chunk.js"
   },
   {
     "revision": "0d0d2162df477393db27",
