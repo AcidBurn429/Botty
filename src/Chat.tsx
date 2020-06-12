@@ -297,7 +297,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'home-fight-want-help-yes',
-            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 116 111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhr zu erreichen',
+            message: 'Ich finds super, dass du dir Hilfe suchst 😀! Rufe die Nummer gegen Kummer 116 111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhr zu erreichen',
         },
         {
             id: 'home-fight-want-help-no',
@@ -318,7 +318,7 @@ export function ProgrammingChatBot() {
         },
         {
             id: 'home-fight-number-yes',
-            message: 'Toll, du bist super stark! Rufe die Nummer gegen Kummer 116 111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhr zu erreichen',
+            message: 'Ich finds super, dass du dir Hilfe suchst 😀! Rufe die Nummer gegen Kummer 116 111 an. Sie sind von Montag - Samstag von 14 - 20 Uhr + am Montag, Mittwoch und Donnerstag um 10 - 12 Uhr zu erreichen',
         },
         {
             id: 'home-fight-number-no',
